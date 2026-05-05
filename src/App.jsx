@@ -17,7 +17,7 @@ function App() {
         </div>
         <div>
           
-          <h1>Get started to day.</h1>
+          <h1>Get started to day. Tae</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
