@@ -7,7 +7,7 @@ export default function HeroButton() {
          hover:border-2 hover:border-bg-gradient-to-r from-[#00FF41] to-[#00E5FF]
          active:bg-gradient-to-r active:from-green-400 active:to-cyan-400
          active:text-black"
-    >
+    > 
       Button
     </button>
   );
