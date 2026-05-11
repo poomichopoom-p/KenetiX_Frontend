@@ -8,7 +8,7 @@ export default function HeroButton() {
          active:bg-gradient-to-r active:from-green-400 active:to-cyan-400
          active:text-black"
     >
-      Button
+      Button2
     </button>
   );
 }
