@@ -7,12 +7,18 @@ import {
 import "./App.css";
 import Contact from "./Page/Contact";
 import ContactUs from "./Page/ContactUs";
+import Section_03 from "./HomeSection/Section03";
+import FAQ from "./Page/FAQ"
+import HowItWorks from "./Page/HowItWorks";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="bg-black min-h-screen text-white">
+        <Section_03 />
         <ContactUs />
+        <FAQ />
+        <HowItWorks />
       </div>
     </BrowserRouter>
   );

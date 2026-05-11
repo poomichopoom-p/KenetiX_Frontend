@@ -1,31 +1,33 @@
-const steps = [
-  {
-    number: "01",
-    title: "เลือกรองเท้า",
-    description:
-      "เลือกรุ่น แบรนด์ และไซส์ที่ต้องการจาก catalog ออนไลน์",
-  },
-  {
-    number: "02",
-    title: "จองวันที่",
-    description:
-      "เลือกรับ-คืน ชำระเงินออนไลน์ปลอดภัย รับ confirmation ทันที",
-  },
-  {
-    number: "03",
-    title: "รับรองเท้า",
-    description:
-      "รับหน้าร้าน หรือเลือกจัดส่งถึงที่อยู่ภายใน 24 ชั่วโมง",
-  },
-  {
-    number: "04",
-    title: "คืนรองเท้า",
-    description:
-      "คืนเมื่อหมดสัญญา ไม่ต้องทำความสะอาด เราดูแลให้ทั้งหมด",
-  },
-];
+// const steps = [
+//   {
+//     number: "01",
+//     title: "เลือกรองเท้า",
+//     description:
+//       "เลือกรุ่น แบรนด์ และไซส์ที่ต้องการจาก catalog ออนไลน์",
+//   },
+//   {
+//     number: "02",
+//     title: "จองวันที่",
+//     description:
+//       "เลือกรับ-คืน ชำระเงินออนไลน์ปลอดภัย รับ confirmation ทันที",
+//   },
+//   {
+//     number: "03",
+//     title: "รับรองเท้า",
+//     description:
+//       "รับหน้าร้าน หรือเลือกจัดส่งถึงที่อยู่ภายใน 24 ชั่วโมง",
+//   },
+//   {
+//     number: "04",
+//     title: "คืนรองเท้า",
+//     description:
+//       "คืนเมื่อหมดสัญญา ไม่ต้องทำความสะอาด เราดูแลให้ทั้งหมด",
+//   },
+// ];
 
 export default function Section_03() {
+
+
   return (
     <section
       aria-labelledby="section-03-heading"
@@ -33,7 +35,7 @@ export default function Section_03() {
     >
       <div className="mx-auto max-w-[1520px]">
         <header className="max-w-5xl">
-          <p className="font-display text-[11px] font-semibold tracking-[0.38em] text-kinetix-lime sm:text-xs">
+          <p className="font-display text-[11px] font-semibold tracking-[0.38rem] text-kinetix-lime sm:text-xs">
             -------- ขั้นตอนง่ายๆ
           </p>
           <h2
