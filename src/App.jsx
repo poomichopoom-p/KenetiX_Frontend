@@ -1,17 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
 import ButtonMain from "./componente/ButtonMain";
+import LoginButton from "./componente/LoginButton";
+import Section01 from "./componente/Section01";
+import SignupPage from "./componente/SignupPage";
 
 function App() {
 
   return (
     <>
       <ButtonMain />
+      <LoginButton />
+      <Section01 />
+      <SignupPage />
     </>
   );
 }
 
 export default App;
+
