@@ -1,12 +1,12 @@
 import { useState } from "react";
-//import reactLogo from "./assets/react.svg";
-//import viteLogo from "./assets/vite.svg";
-//import heroImg from "./assets/hero.png";
-import "./App.css";
 import Navbar from "./componente/NavbarFrontend";
 import ActionButton from "./componente/ActionButton";
 import ProductButton from "./componente/ProductButton";
 import Login from "./pages/Login";
+import ButtonMain from "./componente/ButtonMain";
+import Secondbutton from "./componente/Secondbutton";
+import HeroButton from "./componente/HeroButton";
+import Section_03 from "./componente/Section_03";
 
 function App() {
 
@@ -33,6 +33,7 @@ function App() {
 
 
   return (
+
     <div className="min-h-screen bg-[#0a0a0f] text-white">
       <Navbar setPage={setPage} currentPage={page} />
       <main>

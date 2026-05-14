@@ -7,7 +7,7 @@ export default function Navbar({ setPage, currentPage }) {
             <div className="text-s font-slim">Generation Thailand</div>
 
             <div className="flex gap-8 grow justify-center">
-
+                git merge upstream/main
                 <button
                     onClick={() => setPage('allProduct')}
                     className={`text-sm transition-colors ${currentPage === 'allProduct' ? 'text-[#b4ff39] font-bold' : 'text-gray-400 hover:text-white'}`}
