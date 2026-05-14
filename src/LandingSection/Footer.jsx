@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
-//   const handleNavigate = () => {
-//     navigate("/FAQ");
-//   };
+  //   const handleNavigate = () => {
+  //     navigate("/FAQ");
+  //   };
 
   return (
-    <footer className="bg-black text-white border border-lime-400 px-8 md:px-16 py-14">
+    <footer className="bg-black text-white   px-8 md:px-16 py-14">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* LEFT */}
         <div>
@@ -66,13 +66,13 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link to="/FAQ" className="hover:text-[#C3FF51] duration-200">
+              <Link to="/faq" className="hover:text-[#C3FF51] duration-200">
                 FAQ
               </Link>
             </li>
 
             <li>
-              <Link to="/Contact" className="hover:text-[#C3FF51] duration-200">
+              <Link to="/contact" className="hover:text-[#C3FF51] duration-200">
                 Contact
               </Link>
             </li>

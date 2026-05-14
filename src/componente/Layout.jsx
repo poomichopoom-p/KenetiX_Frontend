@@ -1,20 +1,15 @@
-import { Outlet } from "react-router-dom"
-import Footer from "../HomeSection/Footer"
+import { Outlet } from "react-router-dom";
+import Footer from "../LandingSection/Footer";
+import Nav from "./Nav";
 
-
-
-
-export default function Layout(){
-    return(
-        <>
-        <div className="bg-white">
-            <Outlet />            
-        </div>
-
-        <div >
-            <Footer />         
-        </div>
-        </>
-    )
-    
+export default function Layout() {
+  return (
+    <>
+    <Nav />
+      <div className="min-h-screen bg-black">
+        <Outlet />
+      </div>
+      <Footer />
+    </>
+  );
 }
