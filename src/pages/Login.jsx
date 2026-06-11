@@ -23,15 +23,9 @@ function Login() {
         // 1. Try User Login
         try {
             authResponse = await API.post("/api/users/login", { email, password });
-        } catch (userError) {
+        } catch (Error) {
             // User login failed, let's try Staff Login next
-            try {
-                authResponse = await API.post("/api/staff/admin/login", { email, password });
-            } catch (staffError) {
-                // Both failed
-                const message = staffError.response?.data?.message || userError.response?.data?.message || t("login.loginFailed");
-                setError(message);
-            }
+           console.log(Error)
         }
 
         // 2. If either login succeeded, process the session here
