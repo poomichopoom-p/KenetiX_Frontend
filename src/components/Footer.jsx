@@ -148,7 +148,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-dark-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/25 text-xs">
-            © {new Date().getFullYear()} KINETIX. {t("footer.copyright")}
+            © {new Date().getFullYear()} KINETIX. {t("footer.copyright")} This website was created for educational purposes only.
           </p>
         </div>
       </div>
