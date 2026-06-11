@@ -11,8 +11,11 @@ function getNestedValue(obj, key) {
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(() => {
+    return savedLanguage === "en" ? "en" : "en";
+
     const saved = window.localStorage.getItem("kinetix-language");
     return saved === "th" ? "th" : "en";
+
   });
 
   useEffect(() => {

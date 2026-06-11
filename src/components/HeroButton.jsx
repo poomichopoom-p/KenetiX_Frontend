@@ -6,9 +6,15 @@ export default function HeroButton() {
          hover:bg-transparent hover:text-green-300
          hover:border-2 hover:border-bg-gradient-to-r from-[#00FF41] to-[#00E5FF]
          active:bg-gradient-to-r active:from-green-400 active:to-cyan-400
+<<<<<<< HEAD:src/componente/HeroButton.jsx
+         active:text-black" > 
+      Button
+
+=======
          active:text-black"
     >
       Button
+>>>>>>> dd6513017cd14769dbc41f58ffdb2ef8f2777899:src/components/HeroButton.jsx
     </button>
   );
 }

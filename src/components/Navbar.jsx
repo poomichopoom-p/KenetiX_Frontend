@@ -222,3 +222,4 @@ function UserActions({ onOpenCart, cartCount, isAdmin }) {
     </>
   );
 }
+

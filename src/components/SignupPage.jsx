@@ -26,6 +26,12 @@ function ErrorMsg({ field, errors }) {
   ) : null;
 }
 
+function ErrorMsg({ errors, field }) {
+  return errors[field] ? (
+    <p className="text-red-400 text-xs mt-1 ml-1">{errors[field]}</p>
+  ) : null;
+}
+
 export default function SignupPage() {
   const [formData,    setFormData]    = useState(initialFormData);
   const [errors,      setErrors]      = useState({});
@@ -153,16 +159,42 @@ export default function SignupPage() {
     setPreviewData(null); setApiError("");
   };
 
+  const inputClass = (field) =>
+    `w-full bg-black border rounded-xl px-4 py-3 focus:outline-none transition-colors ${errors[field]
+      ? "border-red-500 focus:border-red-400 error-field"
+      : "border-zinc-700 focus:border-lime-400"
+
   // ── Shared input styles ────────────────────────────────────────────────────
   const inp = (field) =>
     `w-full text-sm rounded-xl px-3 py-2.5 focus:outline-none transition-colors ${
       errors[field] ? "border border-red-400 error-field" : "border border-[#E2E8F0]"
+
     }`;
   const ist = { background: "#F8FAFC", color: "#0F172A" };
   const onF = (e) => { e.target.style.borderColor = "#C3FF51"; };
   const onB = (field) => (e) => { e.target.style.borderColor = errors[field] ? "#f87171" : "#E2E8F0"; };
 
   return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 pt-28 pb-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        {/* Left Content */}
+        <div className="space-y-8">
+          <div>
+            <p className="text-lime-400 uppercase tracking-[0.2em] text-sm mb-4">
+              Customer Registration
+            </p>
+            <h1 className="text-5xl font-bold leading-tight">
+              Join the <span className="text-lime-400">KINETIX</span>
+              <br />
+              Running Shoe Rental Platform
+            </h1>
+            <p className="text-zinc-400 mt-6 max-w-lg leading-relaxed">
+              Register your account to start renting premium running shoe,
+              manage your profile, and track your rental history.
+            </p>
+          </div>
+
     <div className="min-h-screen font-sora flex flex-col" style={{ background: "#F8FAFC" }}>
 
       {/* Back to Home */}
@@ -174,6 +206,7 @@ export default function SignupPage() {
           {t("signup.backToHome")}
         </Link>
       </div>
+
 
       <div className="max-w-5xl w-full mx-auto px-6 pt-4 pb-8 flex flex-col gap-5 flex-grow">
 
@@ -234,28 +267,107 @@ export default function SignupPage() {
                         value={formData.firstName} onChange={handleChange}
                         className={inp("firstName")} style={ist} onFocus={onF} onBlur={onB("firstName")} />
                       <ErrorMsg field="firstName" errors={errors} />
+
                     </div>
                     <div>
                       <input type="text" name="lastName" placeholder={t("signup.lastNamePlaceholder")}
                         value={formData.lastName} onChange={handleChange}
                         className={inp("lastName")} style={ist} onFocus={onF} onBlur={onB("lastName")} />
                       <ErrorMsg field="lastName" errors={errors} />
+
                     </div>
                   </div>
+
+                      <ErrorMsg field="email" errors={errors} />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className={inputClass("phone")}
+                      />
+                      <ErrorMsg field="phone" errors={errors} />
+                    </div>
+                    <div>
+                      <textarea
+                        name="address"
+                        placeholder="Address"
+                        rows={3}
+                        value={formData.address}
+                        onChange={handleChange}
+                        className={`${inputClass("address")} resize-none`}
+                      />
+                      <ErrorMsg field="address" errors={errors} />
+                    </div>
+                    <div>
+                      <input
+                        type="number"
+                        name="shoeSize"
+                        placeholder="Shoe Size"
+                        value={formData.shoeSize}
+                        onChange={handleChange}
+                        className={inputClass("shoeSize")}
+                      />
+                      <ErrorMsg field="shoeSize" errors={errors} />
+                    </div>
 
                   <div>
                     <input type="email" name="email" placeholder={t("signup.emailPlaceholder")}
                       value={formData.email} onChange={handleChange}
                       className={inp("email")} style={ist} onFocus={onF} onBlur={onB("email")} />
                     <ErrorMsg field="email" errors={errors} />
+
                   </div>
+
+                      <ErrorMsg field="bankName" errors={errors} />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name="accountNumber"
+                        placeholder="Account Number"
+                        value={formData.accountNumber}
+                        onChange={handleChange}
+                        className={inputClass("accountNumber")}
+                      />
+                      <ErrorMsg field="accountNumber" errors={errors} />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name="accountName"
+                        placeholder="Account Name"
+                        value={formData.accountName}
+                        onChange={handleChange}
+                        className={inputClass("accountName")}
+                      />
+                      <ErrorMsg field="accountName" errors={errors} />
+                    </div>
 
                   <div>
                     <input type="text" name="phone" placeholder={t("signup.phonePlaceholder")}
                       value={formData.phone} onChange={handleChange}
                       className={inp("phone")} style={ist} onFocus={onF} onBlur={onB("phone")} />
                     <ErrorMsg field="phone" errors={errors} />
+
                   </div>
+
+                      <ErrorMsg field="password" errors={errors} />
+                    </div>
+                    <div>
+                      <input
+                        type="password"
+                        name="confirmPassword"
+                        placeholder="Confirm Password"
+                        value={formData.confirmPassword}
+                        onChange={handleChange}
+                        className={inputClass("confirmPassword")}
+                      />
+                      <ErrorMsg field="confirmPassword" errors={errors} />
+                    </div>
 
                   <div>
                     <input type="number" name="shoeSize" placeholder={t("signup.shoeSizePlaceholder")}
@@ -314,6 +426,7 @@ export default function SignupPage() {
                       value={formData.confirmPassword} onChange={handleChange}
                       className={inp("confirmPassword")} style={ist} onFocus={onF} onBlur={onB("confirmPassword")} />
                     <ErrorMsg field="confirmPassword" errors={errors} />
+
                   </div>
                 </div>
               </div>
